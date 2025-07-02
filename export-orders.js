@@ -8,7 +8,7 @@ const SECRET_KEY = process.env.TILDA_SECRET_KEY;
 async function exportOrders() {
   try {
 
-    const url = `https://api.tildacdn.info/v1/getorders/?publickey=${PUBLIC_KEY}&secretkey=${SECRET_KEY}`;
+    const url = `https://api.tildacdn.info/v1/getprojectslist/?publickey=${PUBLIC_KEY}&secretkey=${SECRET_KEY}`;
     const response = await axios.get(url);
     const orders = response.data.result;
 
